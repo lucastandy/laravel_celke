@@ -2,10 +2,20 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Machine;
+use Illuminate\Support\Facades\DB;
+
 class MachinesController{
     
     public function index(){
-        echo "<h1>Listar as máquinas</h1>";
+        //$machines = DB::select('SELECT id, name FROM machines');
+        // O dd imprime o inspecionamento do objeto na tela e pausa o processamento.
+        //dd($machines);
+
+        $machines = Machine::all();
+        // dd($machines);
+
+        return view('machines.index')->with('machines', $machines);
     }
 
     public function show($id)
