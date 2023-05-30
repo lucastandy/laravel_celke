@@ -13,8 +13,12 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+/*
 Route::get('/listar-maquinas', [MachinesController::class, 'index']);
 Route::get('/visualizar-maquina/{id}', [MachinesController::class, 'show']);
 Route::get('/cadastrar-maquina', [MachinesController::class, 'create']);
 Route::post('/cadastrar-maquina', [MachinesController::class, 'store']);
+*/
+
+Route::resource('machines', '\App\Http\Controllers\MachinesController');
+

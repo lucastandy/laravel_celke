@@ -43,7 +43,7 @@ class MachinesController{
         // Somente o campo nome
         Machine::create($request->only(['name']));
 
-        return redirect('/listar-maquinas');
+        return redirect('machines')->with('success','Máquina cadastrada com sucesso!');
 
     }
 }
