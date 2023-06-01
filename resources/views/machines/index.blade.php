@@ -21,6 +21,7 @@
                     <td>{{ $machine->name }}</td>
                     <td>
                         <a href="{{route('machines.show', $machine->id)}}">Visualizar</a>
+                        <a href="{{route('machines.edit', $machine->id)}}">Editar</a>
                     </td>
                 </tr>
             @endforeach
