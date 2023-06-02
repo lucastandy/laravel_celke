@@ -55,4 +55,10 @@ class MachinesController{
         $machine->fill($request->all())->save();
         return redirect()->route('machines.index')->with('success','Máquina editada com sucesso!');
     }
+
+    public function destroy(Machine $machine){
+        $machine->delete();
+
+        return redirect()->route('machines.index')->with('success', 'Máquina apagada com sucesso!');
+    }
 }
